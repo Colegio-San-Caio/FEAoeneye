@@ -1,21 +1,16 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <unistd.h>
 #include "OQM.h"
+#include "CURLDIY.h"
 
 int main(){
-  srand(time(0));
-  printf("FEAoeneye T-QTS BOX v2 - LPU=MAIN.CFG NPU=OQM.h BUS=OMQ.sh\n");
-  printf("Formula: t = S / T\n");
-  for(int i=0;i<100;i++){
-    double S = 100.0 + rand()%100;
-    double T = 1.0 + (rand()%10);
-    double t = S / T;
-    printf("MATRIX [%03d] ", i);
-    for(int j=0;j<20;j++) printf("%c", 33 + rand()%94);
-    printf(" | S=%.1f T=%.1f => t=%.2f\n", S, T, t);
-    usleep(80000);
-  }
+  printf("FEAoeneye T-QTS BOX v2 - curl DIY macro\n");
+  printf("Formula: t = S / T\n\n");
+  
+  // Your Phia job with curl macro
+  TQTS_CURL_GET("https://jobs.ashbyhq.com/phia/d54a3c16-d4a1-4ed7-b551-af165e7fd16f/application", "phia_job.html");
+  
+  // checksum only
+  TQTS_CURL_CHECK("https://jobs.ashbyhq.com/phia/d54a3c16-d4a1-4ed7-b551-af165e7fd16f/application");
+  
   return 0;
 }
