@@ -1,3 +1,8 @@
-# FEAoeneye
-Symmetry 1 + '1 = 2 np.offset() --force E*
-oeneye.onion
+# FEAoeneye - T-QTS BOX
+**Temperature is Time: t = S/T**
+Open source LPU + NPU architecture by book.
+## Architecture
+- LPU = MAIN.CFG
+- NPU = OQM.h
+- BUS = OMQ.sh
+Test: ./a.out => t=50.0
